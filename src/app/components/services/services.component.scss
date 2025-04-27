@@ -1,58 +1,129 @@
-/* Hero Section Styling */
+/* General Styles for Hero and Services */
 .hero {
-  //   background: url("assets/images/pest-control.jpg") no-repeat center center/cover;
-  //   color: white;
+  background: #f5f5f5;
   text-align: center;
-  padding: 100px 20px;
-  margin-bottom: 20px;
+  padding: 60px 20px;
+  background-image: url("../../assets/Pics/coverImage.jpg"); /* Replace with actual image */
+  background-size: cover;
+  background-position: top;
+  //   color: white;
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
 .hero .btn {
   background-color: #ffcc00;
-  color: #333;
-  padding: 15px 25px;
+  padding: 15px 30px;
   text-decoration: none;
+  color: white;
   font-weight: bold;
   border-radius: 5px;
+  font-size: 1.2rem;
 }
 
-/* Services Section Styling */
+.hero .btn:hover {
+  background-color: #e0a800;
+}
+
 .services {
   text-align: center;
-  padding: 60px;
+  padding: 10px 20px;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
 
 .features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
 .feature {
-  width: 22%;
-  background: #f9f9f9;
+  background-color: #f9f9f9;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .feature h3 {
-  margin-bottom: 15px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .feature p {
-  font-size: 14px;
-  color: #555;
+  font-size: 1rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature h3 {
+    font-size: 1.3rem;
+  }
+
+  .feature p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .hero .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .feature h3 {
+    font-size: 1.2rem;
+  }
+
+  .feature p {
+    font-size: 0.8rem;
+  }
 }
