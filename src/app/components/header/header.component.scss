@@ -1,0 +1,123 @@
+/* General Header Styling */
+.header {
+  background-color: #006400;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  max-width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 20px; // Space for Free Quote button
+
+  li {
+    margin-left: 20px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* Mobile Navigation: Hidden by default */
+  @media (max-width: 768px) {
+    display: none; // Hide nav on mobile by default
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #006400;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+
+    li {
+      margin: 10px 0;
+    }
+
+    &.active {
+      display: flex; // Show nav when active
+    }
+  }
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  @media (max-width: 768px) {
+    display: flex; // Display only on mobile
+  }
+}
+
+/* Free Quote Button */
+.free-quote-btn {
+  background-color: #ffcc00; // Yellow color
+  color: #333;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #e6b800; // Darken on hover
+  }
+
+  @media (max-width: 768px) {
+    display: none; // Hide on mobile
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  /* Show Free Quote button on mobile below the nav */
+  .free-quote-btn {
+    display: block;
+    margin-top: 20px;
+    // width: 100%;
+    text-align: center;
+  }
+}

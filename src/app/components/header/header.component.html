@@ -1,0 +1,23 @@
+<header class="header">
+    <nav>
+        <!-- Logo Section -->
+        <a routerLink="/" class="logo">Maa Pest Control</a>
+
+        <!-- Hamburger Menu Icon (for mobile) -->
+        <div class="hamburger" (click)="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul [class.active]="menuActive">
+            <li><a routerLink="/about">About Us</a></li>
+            <li><a routerLink="/services">Services</a></li>
+            <li><a routerLink="/contact">Contact</a></li>
+        </ul>
+
+        <!-- Free Quote Button -->
+        <a routerLink="/quote" class="free-quote-btn">Get a Free Quote</a>
+    </nav>
+</header>
